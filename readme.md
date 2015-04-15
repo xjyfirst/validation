@@ -10,18 +10,15 @@ $ composer require txthinking/validation
 
 ```
 <?php
-use Tx\Validation;
+use Tx\Validator;
 
-$validation = new Validation();
-$validator = $validation->getValidator();
-
-$validator = $validator->make(
-    ['name' => 'Day'],
-    ['name' => 'required|min:5'],
-    ['name.min' => 'name is too short']
+$v = Validator::make(
+    ['name' => 'Day007'],
+    ['name' => 'required|max:5'],
+    ['name.max' => 'who are u 007']
 );
-if ($validator->fails()){
-    var_dump($validator->messages());
+if ($v->fails()){
+    var_dump($v->messages());
 }
 ```
 
