@@ -7,24 +7,22 @@ use Illuminate\Validation\Factory;
 use Symfony\Component\Translation\Translator;
 use Symfony\Component\Translation\MessageSelector;
 
-class Validation {
+class ValidatorProvider extends ServiceProvider {
 
     /**
      * @var Illuminate\Container\Container
      */
     protected $container;
 
-    /**
-     * @var Illuminate\View\Factory
-     */
-    protected $instance;
-
     public function __construct(){
         $this->container = new Container;
-		$this->registerTranslator();
 
+        $this->register();
+    }
+
+    public function register(){
+		$this->registerTranslator();
 		$this->registerValidationResolverHook();
-		$this->instance = $this->registerValidationFactory();
     }
 
     public function registerTranslator()
@@ -68,12 +66,12 @@ class Validation {
 	}
 
     /**
-     * @brief getValidator
+     * @brief getInstance
      *
      * @return validator
      */
-    public function getValidator(){
-       return  $this->instance;
+    public function getInstance(){
+		return $this->registerValidationFactory();
     }
 
 }

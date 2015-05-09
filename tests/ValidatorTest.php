@@ -1,24 +1,6 @@
 <?php
-use \Tx\Validation;
 use \Tx\Validator;
-class ValidationTest extends TestCase{
-    public $v;
-
-    public function __construct(){
-        $v = new Validation();
-        $this->v = $v->getValidator();
-    }
-
-    public function testValidation(){
-        $v = $this->v->make(
-            ['name' => 'Day'],
-            ['name' => 'required|min:5'],
-            ['name.min' => 'who are u']
-        );
-        if ($v->fails()){
-            var_dump($v->messages());
-        }
-    }
+class ValidatorTest extends TestCase{
 
     public function testValidator(){
         $v = Validator::make(
