@@ -27,9 +27,9 @@ class ValidatorProvider extends ServiceProvider {
 
     public function registerTranslator()
     {
-        $this->container->bindShared('translator', function(){
+        $this->container->bind('translator', function(){
             return new Translator('en_US', new MessageSelector());
-        });
+        },true);
     }
 
 	/**
