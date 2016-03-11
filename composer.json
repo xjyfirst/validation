@@ -1,9 +1,14 @@
 {
-    "name": "banquo1/validation",
+    "name": "txthinking/validation",
     "description": "Use Laravel 5 validation as a standalone component.",
     "keywords": ["laravel", "validation"],
     "license": "MIT",
     "authors": [
+        {
+            "name": "Cloud",
+            "email": "cloud@txthinking.com",
+            "homepage": "https://github.com/txthinking"
+        },
         {
             "name": "Jörg Kunz",
             "email": "jk@kemweb.de",
