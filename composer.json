@@ -7,12 +7,17 @@
         {
             "name": "Cloud",
             "email": "cloud@txthinking.com",
-            "homepage": "http://www.txthinking.com",
-            "role": "Thinker"
+            "homepage": "https://github.com/txthinking"
+        },
+        {
+            "name": "Jörg Kunz",
+            "email": "jk@kemweb.de",
+            "homepage": "http://www.kemweb.de",
+            "role": "IT-Fuzzi"
         }
     ],
     "require": {
-        "illuminate/validation": "~5.0"
+        "illuminate/validation": "~5.2"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.6"
