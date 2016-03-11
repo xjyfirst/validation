@@ -24,4 +24,4 @@ if ($v->fails()){
 
 ### Documentation
 
-http://laravel.com/docs/5.0/validation
+http://laravel.com/docs/5.2/validation
